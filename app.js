@@ -1,11 +1,11 @@
 import path from "path";
 import express from "express";
 import hbs from "hbs";
-
 import geocode from "./utils/geocode.js";
 import forecast from "./utils/forecast.js";
 
 const app = express();
+const port = process.env.PORT || 8080
 
 // Define paths for Express config
 const __dirname = path.resolve();
@@ -98,6 +98,6 @@ app.get("*", (req, res) => {
     });
 });
 
-app.listen(3000,() => {
-    console.log("Server is up on port 3000.");
+app.listen(port,() => {
+    console.log("Server is up on port " + port);
 });
