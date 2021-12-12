@@ -9,9 +9,9 @@ const app = express();
 
 // Define paths for Express config
 const __dirname = path.resolve();
-const publicDirectoryPath = path.join(__dirname, "../public");
-const viewPath = path.join(__dirname, "../templates/views");
-const partialsPath = path.join(__dirname, "../templates/partials");
+const publicDirectoryPath = path.join(__dirname, "/public");
+const viewPath = path.join(__dirname, "/templates/views");
+const partialsPath = path.join(__dirname, "/templates/partials");
 
 // Setup handlebars and views location
 app.set("view engine", "hbs");
@@ -30,7 +30,7 @@ app.get("", (req, res) => {
 
 app.get("/about", (req, res) => {
     res.render("about",{
-        title: "About Me",
+        title: "About",
         name: "Ateeq Aziz"
     })
 });
